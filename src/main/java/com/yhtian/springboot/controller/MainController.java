@@ -3,6 +3,7 @@ package com.yhtian.springboot.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author: yhtian
@@ -10,12 +11,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @description: Controller
  * 控制层逻辑代码
  */
-@Controller
+@RestController
 public class MainController {
 
     @RequestMapping("/hello")
-    @ResponseBody
     public String helloWorld() {
         return "Hello World!";
+    }
+
+    @RequestMapping({"/", "/index.html"})
+    public String index () {
+        return "login";
     }
 }

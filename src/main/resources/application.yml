@@ -1,16 +1,3 @@
-server:
-  port: 8081
-
-person:
-  name: yhtian
-  age: 19
-  lists:
-    - a1
-    - a2
-  maps:
-    k1: v1
-    k2: 12
-
-  dog:
-    name: gou
-    age: 2
+spring:
+  profiles:
+    active: dev
